@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- // bootstrab // -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <!-- // fontawesome // -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- // css // -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/en-style.css"> -->
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="loginBody">
+        <img src="imgs/Whangaehu.png" alt="" class="main_bg_img">
+        <div class="AuthBox ">
+            <div class="text-center">
+                <img src="imgs/logo.png" alt="" class="logoLogin mb-3">
+                <h5 class="main-color mb-2">تسجيل دخولك </h5>
+                <p class="text-muted mb-2">مرحبا بك ! من فضلك ادخل بياناتك</p>
+                <form action="index.html">
+                    <div class="form-group position-relative">
+                        <div class="distinguishInput">
+                            الاسم
+                        </div>
+                        <input type="text" class="form-control" placeholder="برجاء ادخال الاسم ">
+                    </div>
+                    <div class="form-group position-relative">
+                        <label for="password" class="distinguishInput">
+                            كلمة المرور
+                        </label>
+                        <input type="password" class="form-control password" id="password" placeholder="*********">
+                        <label class="input_icon eye" data-id="password" for="password">
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </label>
+                    </div>
+                    <div class="form-group flex-between flex-wrap">
+                        <div>
+                            <label class="d-flex align-items-center">
+                                <input type="checkbox" class="checkbox" hidden>
+                                <div class="checkboxShape m-end-10">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span> تذكرني </span>
+                            </label>
+
+                        </div>
+                        <a href="password_recovery.html" class="text-dark"> هل نسيت كلمة المرور ؟</a>
+                    </div>
+                    <button class="w-md-50 w-100 btn main_btn bg-main2 mb-3 hvr-pulse">
+                        تسجيل دخول </button>
+                    <a href="register.html" class="w-md-50 w-100 btn main_btn transparent_btn hvr-pulse"> تسجيل جديد </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ________________ // loader // ________________ -->
+    <div id="preloader" class="">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ________________ // scripts // ________________ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.segmentedInput.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        // ////////////////////////////
+        let passwords = document.querySelectorAll(".password");;
+        let eyes = document.querySelectorAll('.eye')
+        eyes.forEach(eye => {
+            eye.onclick = function () {
+                passwords.forEach(pass => {
+                    if (pass.value == '') {
+                        return
+                    } else {
+                        if (pass.id == eye.dataset.id) {
+                            let type = pass.getAttribute('type') === 'password' ? 'text' : 'password';
+                            pass.setAttribute("type", type);
+                            if (pass.getAttribute('type') === 'password' || pass.value == "") {
+                                eye.querySelector('.fa-regular').classList.add('fa-eye-slash')
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye')
+                            } else if (pass.getAttribute('type') === 'text') {
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye-slash')
+                                eye.querySelector('.fa-regular').classList.add('fa-eye')
+                            }
+                        }
+                    }
+
+
+                })
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

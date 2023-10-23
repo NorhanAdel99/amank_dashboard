@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- // bootstrab // -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/dataTables.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+    <!-- // fontawesome // -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- // css // -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/en-style.css"> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ________________ // main // ________________ -->
+    <div class="side_menu d-flex flex-column">
+        <i class="fa-solid fa-xmark main-color text-left close_menu_icon spin-icon"></i>
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-around mb-20">
+                <a class="contain_dashboard_logo" href="index.html">
+                    <img src="imgs/logo.png" alt="logo" class="logo" loading="lazy">
+                </a>
+                <img src="imgs/civilDefense.png" alt="logo" class="mainImg " loading="lazy">
+            </div>
+        </div>
+
+        <ul class="side_menu_ul">
+            <li class="about_section">
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="imgs/house.png" alt="" class="m-end-20 side_menu_icon">
+                    <span>الرئيسية </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#reservation">
+                <a href="Reports.html" class="d-flex align-items-center">
+                    <img src="imgs/Reports.png" alt="" class="m-end-20 side_menu_icon">
+
+                    <span class="m-end-5"> البلاغات</span>
+                    <span class="space_gray"> (58)</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#courses">
+                <a href="Powers.html" class="d-flex align-items-center">
+                    <img src="imgs/Powers.png" alt="" class="m-end-20 side_menu_icon">
+                    <span>الصلاحيات </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#personnalAccout">
+                <a href="settings.html" class="d-flex align-items-center">
+                    <img src="imgs/settings-gear-64.png" alt="" class="m-end-20  side_menu_icon">
+                    <span> بيانات الحساب </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#financialAccounts">
+                <a href="about_us.html" class="d-flex align-items-center">
+                    <img src="imgs/about.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> عن امانك</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="contact_us.html" class="d-flex align-items-center">
+                    <img src="imgs/contact_us.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> اتصل بنا</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="termsAndCondition.html" class="d-flex align-items-center">
+                    <img src="imgs/termsAndConditions.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> الشروط والاحكام</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="FQS.html" class="d-flex align-items-center">
+                    <img src="imgs/commandQuestions.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> الاسـئلة المتكررة</span>
+                </a>
+            </li>
+            <li class="about_section logOut" data-id="#logOut">
+                <a href="logIn.html" class="d-flex align-items-center  text-danger">
+                    <img src="imgs/logout.png" alt="" class="m-end-20 side_menu_icon logOutImg">
+                    <span> تسجيل الخروج</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- body-content -->
+    <div id="main">
+        <div class=" topper py-20">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-end gap-10">
+                    <div class="d-flex">
+                        <div class="main_icon"><i class="fa-solid fa-bars-staggered f-16"></i></div>
+                    </div>
+
+                    <a href="notification.html" class="position-relative main-color-5 ">
+                        <div class="sm-box">
+                            <i class="fa-solid fa-bell f-25"></i>
+                        </div>
+                        <i class="fa-solid fa-circle text-danger f-10 status"></i>
+                    </a>
+                    <div class="d-flex align-items-center gap-10">
+                        <img src="imgs/person.png" alt="" class="md_img">
+                        <h6><span class="m-end-5">اهلا بك</span><span>محمد</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container">
+                <div class="s-space">
+                    <h6 class="space_gray mb-3"> الطلبات</h6>
+                    <ul class="nav pro-tabs nav-tabs d-flex justify-content-between gap-10" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active " id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">الطلبات الجديدة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">الطلبات الحالية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                aria-controls="contact" aria-selected="false">الطلبات المنتهية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " id="end-tab" data-toggle="tab" href="#end" role="tab"
+                                aria-controls="end" aria-selected="false">الطلبات الملغية</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-30" id="myTabContent">
+                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="contain-table">
+                                <table id="table" class="project_table table1 display responsive nowrap">
+                                    <thead>
+                                        <tr>
+
+                                            <th> # </th>
+                                            <th> اسم العميل </th>
+                                            <th> نوع البلاغ </th>
+                                            <th> العنوان </th>
+                                            <th> وقت الطلب </th>
+                                            <th> حالة الطلب </th>
+                                            <th> تفاصيل البلاغ</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> بانتظار الموافقة علي البلاغ</td>
+                                            <td><a href="newRequestDetails.html" class="main-color-5"> تفاصيل الطلب </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="contain-table">
+                                <table id="table2" class="project_table table2 display responsive nowrap">
+                                    <thead>
+                                        <tr>
+
+                                            <th> # </th>
+                                            <th> اسم العميل </th>
+                                            <th> نوع البلاغ </th>
+                                            <th> العنوان </th>
+                                            <th> وقت الطلب </th>
+                                            <th> حالة الطلب </th>
+                                            <th> تفاصيل البلاغ</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> جاري التعامل </td>
+                                            <td><a href="currentRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="contain-table">
+                                <table id="table3" class="project_table table3 display responsive nowrap">
+                                    <thead>
+                                        <tr>
+
+                                            <th> # </th>
+                                            <th> اسم العميل </th>
+                                            <th> نوع البلاغ </th>
+                                            <th> العنوان </th>
+                                            <th> وقت الطلب </th>
+                                            <th> حالة الطلب </th>
+                                            <th> تفاصيل البلاغ</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="main-color text-dark font-bold"> تم التعامل </td>
+                                            <td><a href="FinishedrequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="end" role="tabpanel" aria-labelledby="end-tab">
+                            <div class="contain-table">
+                                <table id="table4" class="project_table table4 display responsive nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th> # </th>
+                                            <th> اسم العميل </th>
+                                            <th> نوع البلاغ </th>
+                                            <th> العنوان </th>
+                                            <th> وقت الطلب </th>
+                                            <th> حالة الطلب </th>
+                                            <th> تفاصيل البلاغ</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="my-10">
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="space_gray"> 1987</td>
+                                            <td class="text-muted"> محمد احمد </td>
+                                            <td class="text-muted"><span> منشأة </span><span>-</span><span>بلاغ
+                                                    حريق</span></td>
+                                            <td class="main-color">الزهراء الرياض السعودية</td>
+                                            <td class="text-dark font-bold"><span class="m-end-5">8/2/2022</span>
+                                                <span>8:00</span><span>am</span>
+                                            </td>
+                                            <td class="text-danger font-bold">طلب مرفوض </td>
+                                            <td><a href="CanceledRequestDetails.html" class="main-color-5"> تفاصيل الطلب
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ________________ // loader // ________________ -->
+    <div id="preloader" class="">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>    
+        </div>
+    </div>
+    <!-- ________________ // scripts // ________________ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery-datatable.min.js"></script>
+    <script src="js/datatable-responsive.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+
+    <script>
+        let allLinks = document.querySelectorAll(".about_section a");
+        allLinks.forEach((link) => {
+            if (link.href == location.href) {
+                link.parentElement.classList.add('active')
+            } else if (link.href !== location.href) {
+                link.parentElement.classList.remove('active');
+            }
+        })
+        let main_icon = document.querySelector(".main_icon");
+        let sideMenu = document.querySelector(".side_menu")
+        let main = document.getElementById("main")
+
+        main_icon.onclick = function () {
+            sideMenu.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+        let dashboardIcon = document.querySelector(".close_menu_icon")
+        dashboardIcon.onclick = function (e) {
+            sideMenu.classList.remove('active')
+        }
+    </script>
+    <script>
+
+
+        $(document).ready(function () {
+            $('.project_table').DataTable({
+                responsive: true,
+                scrollCollapse: true,
+                columnDefs: [
+                    { responsivePriority: 2, targets: -1 }
+                ],
+                info: false,
+                "bPaginate": true,
+                "sortable": false,
+                searching: false,
+                lengthChange: true,
+                info: false,
+                ordering: false,
+                language: {
+                    "loadingRecords": "جارٍ التحميل...",
+                    "lengthMenu": "أظهر _MENU_ مدخلات",
+                    "zeroRecords": "لم يعثر على أية سجلات",
+                    "info": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+                    "search": "ابحث:",
+                    "paginate": {
+                        "first": "<div>nn</div>",
+                        "previous": "<i class='fa-solid fa-angle-right'></i>",
+                        "next": "<i class='fa-solid fa-angle-left'></i>",
+                        "last": "الأخير"
+                    },
+                }
+
+            });
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                $($.fn.dataTable.tables(true)).DataTable()
+                    .columns.adjust()
+                    .responsive.recalc();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

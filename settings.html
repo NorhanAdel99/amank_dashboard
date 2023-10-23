@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- // bootstrab // -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/dataTables.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <!-- // fontawesome // -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- // css // -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/en-style.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ________________ // main // ________________ -->
+    <div class="side_menu d-flex flex-column">
+        <i class="fa-solid fa-xmark main-color text-left close_menu_icon spin-icon"></i>
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-around mb-20">
+                <a class="contain_dashboard_logo" href="index.html">
+                    <img src="imgs/logo.png" alt="logo" class="logo" loading="lazy">
+                </a>
+                <img src="imgs/civilDefense.png" alt="logo" class="mainImg " loading="lazy">
+            </div>
+        </div>
+
+        <ul class="side_menu_ul">
+            <li class="about_section">
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="imgs/house.png" alt="" class="m-end-20 side_menu_icon">
+                    <span>الرئيسية </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#reservation">
+                <a href="Reports.html" class="d-flex align-items-center">
+                    <img src="imgs/Reports.png" alt="" class="m-end-20 side_menu_icon">
+
+                    <span class="m-end-5"> البلاغات</span>
+                    <span class="space_gray"> (58)</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#courses">
+                <a href="Powers.html" class="d-flex align-items-center">
+                    <img src="imgs/Powers.png" alt="" class="m-end-20 side_menu_icon">
+                    <span>الصلاحيات </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#personnalAccout">
+                <a href="settings.html" class="d-flex align-items-center">
+                    <img src="imgs/settings-gear-64.png" alt="" class="m-end-20  side_menu_icon">
+                    <span> بيانات الحساب </span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#financialAccounts">
+                <a href="about_us.html" class="d-flex align-items-center">
+                    <img src="imgs/about.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> عن امانك</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="contact_us.html" class="d-flex align-items-center">
+                    <img src="imgs/contact_us.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> اتصل بنا</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="termsAndCondition.html" class="d-flex align-items-center">
+                    <img src="imgs/termsAndConditions.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> الشروط والاحكام</span>
+                </a>
+            </li>
+            <li class="about_section" data-id="#logOut">
+                <a href="FQS.html" class="d-flex align-items-center">
+                    <img src="imgs/commandQuestions.png" alt="" class="m-end-20 side_menu_icon">
+                    <span> الاسـئلة المتكررة</span>
+                </a>
+            </li>
+            <li class="about_section logOut" data-id="#logOut">
+                <a href="logIn.html" class="d-flex align-items-center  text-danger">
+                    <img src="imgs/logout.png" alt="" class="m-end-20 side_menu_icon logOutImg">
+                    <span> تسجيل الخروج</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- body-content -->
+    <div id="main">
+        <div class=" topper py-20">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-end gap-10">
+                    <div class="d-flex">
+                        <div class="main_icon"><i class="fa-solid fa-bars-staggered f-16"></i></div>
+                    </div>
+
+                    <a href="notification.html" class="position-relative main-color-5 ">
+                        <div class="sm-box">
+                            <i class="fa-solid fa-bell f-25"></i>
+                        </div>
+                        <i class="fa-solid fa-circle text-danger f-10 status"></i>
+                    </a>
+                    <div class="d-flex align-items-center gap-10">
+                        <img src="imgs/person.png" alt="" class="md_img">
+                        <h6><span class="m-end-5">اهلا بك</span><span>محمد</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container">
+                <div class="s-space">
+                    <h6 class="space_gray mb-3"> الاعددات</h6>
+                    <div class="bg-wh p-20 main-rad">
+                        <h6 class="mb-3"> بيانات الحساب </h6>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <form action="#">
+                                    <div class="form-group position-relative">
+                                        <div class="distinguishInput">
+                                            الاسم
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="برجاء ادخال الاسم ">
+                                    </div>
+                                    <div class="form-group  position-relative contain-select2 ">
+                                        <div class="distinguishInput">
+                                            رقم الجوال
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="29289289">
+                                        <select class="select2 formSelect2" name="state">
+                                            <option value="egy">+966</option>
+                                            <option value="saudi"> +20 </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-end">
+                                        <a href="changePhoneNumber.html" class="main-color font-bold"> تغيير رقم الجوال
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="form-group  position-relative form-control ContainfullSelect overflow-auto">
+                                        <div class="distinguishInput">
+                                            عنوان المركز
+                                        </div>
+                                        <!-- <input type="number" class="" placeholder=" 29289289  "> -->
+                                        <select class="select2" name="state" aria-valuemax="dbshbsjh">
+                                            <option value="المدينة">المدينة</option>
+                                            <option value="الرياض"> الرياض </option>
+                                            <option value="جدة"> جدة </option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group position-relative">
+                                        <label for="files" class="text-muted d-block">
+                                            <div class="mb-2">
+                                                الهوية الوطنية
+                                            </div>
+                                            <input type="file" class="file" id="files"
+                                                accept="image/jpeg,image/gif,image/png,image/x-eps" hidden>
+                                            <div class="d-flex gap-10 flex-wrap">
+                                                <label for="files" class="input-icon-galler">
+                                                    <i class="fa-solid fa-camera-retro"></i>
+                                                </label>
+                                                <div class="containPdf"></div>
+                                                <div class="gallery d-flex flex-wrap"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <a href="changePassword.html" class="w-md-50 w-100 btn main_btn bg-main2 mb-3 hvr-pulse"> تغيير كلمة
+                                        المرور </a>
+                                    <button class="w-md-50 w-100 btn main_btn transparent_btn hvr-pulse"> ارسال الطلب لللادارة </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ________________ // loader // ________________ -->
+    <div id="preloader" class="">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>    
+        </div>
+    </div>
+    <!-- ________________ // scripts // ________________ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery-datatable.min.js"></script>
+    <script src="js/datatable-responsive.min.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.select2').select2({
+            });
+        });
+
+        // ////////////////////////////////
+        let allLinks = document.querySelectorAll(".about_section a");
+        allLinks.forEach((link) => {
+            if (link.href == location.href) {
+                link.parentElement.classList.add('active')
+            } else if (link.href !== location.href) {
+                link.parentElement.classList.remove('active');
+            }
+        })
+        let main_icon = document.querySelector(".main_icon");
+        let sideMenu = document.querySelector(".side_menu")
+        let main = document.getElementById("main")
+
+        main_icon.onclick = function () {
+            sideMenu.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+        let dashboardIcon = document.querySelector(".close_menu_icon")
+        dashboardIcon.onclick = function (e) {
+            sideMenu.classList.remove('active')
+        }
+        // /////////////////////////////////
+        function readURL(input) {
+            for (var i = 0; i < input.files.length; i++) {
+                console.log(input.files[i].type == 'application/pdf')
+                console.log(input.files[i].type.split('/')[0] === 'image')
+
+                if (input.files[i].type == 'application/pdf') {
+                    let name = input.files[i].name
+                    document.querySelector(".containPdf").innerHTML +=
+                        '<div class="uploadedName m-0">' + `${name}` + '<i class="fa-solid fa-xmark delpdf px-1"></i>' + '</div>';
+                    $(".uploadedName").on('click', '.delpdf', function (e) {
+                        $(this).parents('.uploadedName').remove();
+                        e.preventDefault()
+                    });
+
+                }
+                if (input.files[i]) {
+                    if (input.files[i].type.split('/')[0] === 'image') {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            var img = $('<img id="dynamic">');
+                            var containImg = $('<div class="dynamicParent"></div');
+                            var delImg = $('<i class="fa-solid fa-circle-xmark delImg text-danger"></i>')
+                            img.attr('class', 'imgPreview')
+                            img.attr('src', e.target.result);
+                            delImg.appendTo(containImg)
+                            img.appendTo(containImg);
+                            containImg.appendTo('.gallery');
+                            containImg.on('click', '.delImg', function (e) {
+                                $(this).parents('.dynamicParent').remove();
+                                e.preventDefault()
+                            });
+                        }
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+            }
+        }
+
+        $(".file").change(function () {
+            readURL(this);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- // bootstrab // -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- // fontawesome // -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- // css // -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/en-style.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loginBody">
+        <img src="imgs/Whangaehu.png" alt="" class="main_bg_img">
+        <div class="AuthBox ">
+            <div class="text-center mb-3">
+                <img src="imgs/logo.png" alt="" class="form-logo ">
+            </div>
+            <h5 class="mb-3"> الشروط والاحكام</h5>
+            <p class="mb-3 text-muted text-justify">
+                هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا
+                هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا
+                النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص
+                مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال
+                لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر
+                هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا
+                النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص
+                مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال
+                لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر
+                هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا
+                النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص
+                مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال
+                لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص هذا النص مثال لنص ممكن
+                ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان
+                يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل
+                بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر هذا النص مثال لنص ممكن ان يستبدل بنص
+                اخر هذا النص مثال لنص ممكن ان يستبدل بنص اخر</p>
+        </div>
+    </div>
+    <!-- ________________ // loader // ________________ -->
+    <div id="preloader" class="">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>    
+        </div>
+    </div>
+    <!-- ________________ // scripts // ________________ -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.segmentedInput.js"></script>
+    <!-- // main-script //  -->
+    <script src="js/script.js"></script>
+    <script>
+        // ////////////////////////////
+        let passwords = document.querySelectorAll(".password");;
+        let eyes = document.querySelectorAll('.eye')
+        eyes.forEach(eye => {
+            eye.onclick = function () {
+                passwords.forEach(pass => {
+                    if (pass.value == '') {
+                        return
+                    } else {
+                        if (pass.id == eye.dataset.id) {
+                            let type = pass.getAttribute('type') === 'password' ? 'text' : 'password';
+                            pass.setAttribute("type", type);
+                            if (pass.getAttribute('type') === 'password' || pass.value == "") {
+                                eye.querySelector('.fa-regular').classList.add('fa-eye-slash')
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye')
+                            } else if (pass.getAttribute('type') === 'text') {
+                                eye.querySelector('.fa-regular').classList.remove('fa-eye-slash')
+                                eye.querySelector('.fa-regular').classList.add('fa-eye')
+                            }
+                        }
+                    }
+
+
+                })
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

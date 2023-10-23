@@ -1,0 +1,107 @@
+
+  body{
+    direction: ltr !important;
+    text-align: left !important;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: unset !important;
+    margin-right: -20px;
+  }
+  #main{
+    width: calc(100% - 230px);
+    margin-right: unset;
+    margin-left: 230px;
+  }
+  .topper {
+    right: 0;
+    left: 230px;
+  }
+  .about_section::before {
+    right: unset;
+    left: 0;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    left: unset !important;
+    right: 5px !important;
+}
+.status {
+  left: unset;
+  right: 12px;
+}
+.distinguishInput {
+  right: unset;
+  left: 18px;
+ 
+}
+.contain-select2 .select2 {
+ 
+  left: unset;
+  right: 20px;
+}
+.form-group .select2-container--default .select2-selection--single {
+  border-right: unset !important;
+  border-left: 1px solid var(--space-gray) ;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  left: unset;
+  right: 50%;
+}
+.input_icon {
+  left: unset;
+  right: 15px;
+}
+.dynamicParent .delImg {
+  right: unset;
+  left: 3px ;
+}
+.contain-select2.containIcon .select2 {
+  left: unset;
+  right: 50px;
+}
+thead tr th:first-of-type {
+  border-top-right-radius: unset;
+  border-top-left-radius: 10px;
+}
+
+thead tr th:last-of-type {
+  border-top-left-radius: unset;
+  border-top-right-radius: 10px;
+}
+.ContainfullSelect .select2 {
+
+  left: unset;
+  right: 0;
+}
+.fa-angle-right , .fa-angle-left{
+  transform: rotate(180deg);
+}
+@media (max-width: 900px) {
+
+  #main {
+    width: 100%;
+    margin-left: unset;
+  }
+
+  
+  .topper{
+    /* right: unset; */
+    left: 0;
+  }
+
+}
+.text-left{
+  text-align: right !important;
+}
+.main-select
+.select2-container--default .select2-selection--single {
+    
+    padding: 0 20px 0 10px;
+
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+  padding-right: 30px;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+  left: unset;
+  right: 5px;
+}
